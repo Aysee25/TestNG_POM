@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Istenen Classlari Paralel Calistirma" parallel="classes" thread-count="2" verbose="3">
+    <!--
+    paralel calistirmak icin xml dosyamızda
+    cok kucuk iki ekleme yapmamiz yeterlidir
+
+    1- parallel="classes"/test/methods
+    bolusumun hangi seviyede yapilacagini belirler
+    testler calisirken cakismalar olmamasi,
+    gorev bolusumunun mumkun oldugunca esit olmasi,
+    bagimli testlerin ayni browser tarafindan caliştirilabilmesi
+    icin tum class'lari / package'lari manuel olarak testlere ayırıp
+    -->
+    <test name="class calistirma">
+        <classes>
+            <class name="tests.day12_testNG.C03_DependsOnMethods"></class>
+            <class name="tests.day13_testNGFramework.C06_QDLoginTest"></class>
+            <class name="tests.day14_testNgFramework_xmlFiles.C03_SoftAssertions"></class>
+        </classes>
+    </test>
+</suite>
